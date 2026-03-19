@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -13,7 +14,7 @@ const Signup = () => {
      const[error,setError] = useState("")
      const[success,setSuccess] = useState("") 
       // function to submit
-  const handleSubmit = (e)=>{
+  const handleSubmit = async(e)=>{
     e.preventDefault()
     setLoading("PLease wait...")
     try{
@@ -23,6 +24,11 @@ const Signup = () => {
       formData.append("email",email);
       formData.append("phone",phone);
       formData.append("password",password);
+
+        // adding base url
+      const response = await axios.post("https://collinsfungo.alwaysdata.net/api/signup",formData);
+      setSuccess(response.data.success)
+      setLoading("")
 
       
     }catch (error){
@@ -45,7 +51,9 @@ const Signup = () => {
                 <input type="email" placeholder='Enter email' className='form-control' onChange={(e)=>setEmail(e.target.value)}/><br/>
                 <input type="tel" placeholder='Enter phone' className='form-control' onchange={(e)=>setPhone(e.target.value)}/><br/>
                 <input type="password" placeholder='Enter password' className='form-control' onchange={(e)=>setPassword(e.target.value)}/><br/>
-                <input type="submit" value="Signup"/><br/>
+                <input type="submit"  
+                value={loading ? "Login...":"signup"}
+                disabled={loading} /><br/>
                 {/* In case someone has already signed in */}
             <Link to='/signin' className='text-dark'>Already have an account? Signin</Link>
             </form>
