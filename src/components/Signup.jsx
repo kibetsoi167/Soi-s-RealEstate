@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 const Signup = () => {
     // declaring variables
@@ -40,7 +41,7 @@ const Signup = () => {
 
   return (
     <div className='row justify-content-center form'>
-        <div className='col-md-6 card shadow m-2 p-4'>
+        <div className='col-md-6 card bg-transparent m-2 p-4'>
             <h1>Signup</h1>
             {loading}
             {error}
@@ -60,7 +61,9 @@ const Signup = () => {
 
 
         </div>
+        <Footer/>
     </div>
+    
   )
 }
 

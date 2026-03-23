@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from './Footer'
 
 const Signin = () => {
    
@@ -48,7 +49,7 @@ const Signin = () => {
 
   return (
     <div className='row justify-content-center'>
-        <div className='col-md-6 card shadow m-2 p-4'>
+        <div className='col-md-6 card bg-transparent m-2 p-4'>
             <h1>signin</h1>
             {loading} <br />
             {error} <br />
@@ -62,6 +63,7 @@ const Signin = () => {
             </form>
 
         </div>
+        <Footer/>
     </div>
   )
 }

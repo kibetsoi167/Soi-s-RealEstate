@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import image from '../logo.svg'
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 const Getplots = () => {
     // declaring state variables
   const[products,setProducts]=useState([]);
@@ -49,12 +50,13 @@ const Getplots = () => {
             <b className='text-warning'>ksh {product .product_cost}</b><br/>
             <button 
             className='btn btn-dark mt-2 w-100'
-            onClick={()=>navigate("/makepayment",{state:{product}})}
+            onClick={()=>navigate("/Mpesapayment",{state:{product}})}
             >purchase now</button>
           </div>
         </div>
       </div>
       ))}
+      <Footer/>
     </div>
   )
 }
