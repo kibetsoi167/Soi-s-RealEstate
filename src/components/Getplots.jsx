@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import image from '../logo.svg'
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import Mycarousel from './Mycarousel';
 const Getplots = () => {
     // declaring state variables
   const[products,setProducts]=useState([]);

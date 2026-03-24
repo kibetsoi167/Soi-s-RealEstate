@@ -8,6 +8,7 @@ import Signin from './components/Signin';
 import Addplots from './components/Addplots';
 import Getplots from './components/Getplots';
 import MpesaPayment from './components/MpesaPayment';
+import Mycarousel from './components/Mycarousel';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Link to='/Signin'className="btn btn-outline-success ms-2">Signin</Link> 
           <Link to='/Getplots'className="btn btn-outline-success ms-2">Get plots</Link> 
           <Link to='/Addplots'className="btn btn-outline-success ms-2">Add plots</Link> 
+          <Link to='/Mycarousel'className="btn btn-outline-success ms-2">Mycarousel</Link>
         </nav>
         <Routes>
           <Route path='/signup'element={<Signup/>}/>
@@ -31,6 +33,7 @@ function App() {
           <Route path='/addplots'element={<Addplots/>}/>
           <Route path='/Getplots'element={<Getplots/>}/>
           <Route path='/Mpesapayment'element={<MpesaPayment/>}/> 
+          <Route path='/Mycarousel'element={<Mycarousel/>}/> 
         </Routes>
       
      

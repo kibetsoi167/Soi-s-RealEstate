@@ -60,7 +60,7 @@ const MpesaPayment = () => {
         </div>
       </div>
       <Footer/>
-    </div>
+    </div>                                                                                                                                
   )
 }
 
