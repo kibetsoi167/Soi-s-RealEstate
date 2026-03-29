@@ -9,6 +9,7 @@ import Addplots from './components/Addplots';
 import Getplots from './components/Getplots';
 import MpesaPayment from './components/MpesaPayment';
 import Mycarousel from './components/Mycarousel';
+import Navbar from './components/Navbar';
 
 
 
@@ -20,6 +21,14 @@ function App() {
         <h1 className='text-primary'>Welcome To Soi's RealEstate services</h1>
         </div>
         {/* links to connect the routes */}
+
+
+
+        {/* carousel */}
+        <Mycarousel/>
+
+        {/* navbar */}
+        <Navbar/>
         <nav>
           <Link to='/Signup'className="btn btn-outline-success ms-2">Signup</Link>
           <Link to='/Signin'className="btn btn-outline-success ms-2">Signin</Link> 

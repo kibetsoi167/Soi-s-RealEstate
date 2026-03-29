@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import Mycarousel from './Mycarousel';
 const Getplots = () => {
+  
     // declaring state variables
   const[products,setProducts]=useState([]);
   const[loading,setLoading]=useState("");
@@ -26,6 +27,7 @@ const Getplots = () => {
 
     }
   }
+  <Mycarousel/>
    // preallocate resources using useEffect
   useEffect(()=>{
     getProducts()
